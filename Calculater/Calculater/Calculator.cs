@@ -26,6 +26,8 @@ namespace Calculater
             return Math.Pow(x, exp);
         }
 
+        //Hej
+
         
     }
 }
