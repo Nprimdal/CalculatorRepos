@@ -35,6 +35,43 @@ namespace NUnitTestProject1
         }
 
 
+        [TestCase(10, 2, 5)]
+        [TestCase(6, 3, 2)]
+        [TestCase(8, 4, 2)]
+        [TestCase(4,0,0)]
+        public void Test_Divide_TestCase(double a, double b, double expected)
+        {
+            Assert.That(_uut.Divide(a,b), Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void Test_Accumulator_Is_EqualTo_Multiply()
+        {
+            _uut.Add(2, 3);
+            _uut.Multiply(3, 5);
+
+            Assert.That(_uut.Accumulator, Is.EqualTo(15));
+        }
+
+
+        public void Test_Accumulator_Is_EqualTo_Add()
+        {
+            _uut.Multiply(3, 5);
+            _uut.Add(2, 3);
+            
+
+            Assert.That(_uut.Accumulator, Is.EqualTo(5));
+        }
+
+        public void Test_Accumulator_Is_EqualTo_divide()
+        {
+            _uut.Multiply(3, 5);
+            _uut.Divide(6, 3);
+
+
+            Assert.That(_uut.Accumulator, Is.EqualTo(2));
+        }
+
 
 
     }
