@@ -1,3 +1,4 @@
+using System;
 using Calculater;
 using NUnit.Framework;
 
@@ -80,6 +81,13 @@ namespace NUnitTestProject1
 
 
             Assert.That(_uut.Accumulator, Is.EqualTo(2));
+        }
+
+        [Test]
+        public void Test_Divide_DivisorEquals0_ThrowException()
+        {
+            Assert.That(() => _uut.Divide(10, 0), Throws.TypeOf<DivideByZeroException>());
+
         }
 
 

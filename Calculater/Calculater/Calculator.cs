@@ -42,21 +42,14 @@ namespace Calculater
 
         public double Divide(double dividend, double divisor)
         {
-            
-            if (divisor != 0)
+            if (divisor == 0)
             {
-                double result = dividend/divisor;
-                Accumulator = result;
-                return result;
-               
-            }
-            else
-            {
-                Console.WriteLine("Du kan ikke dividere med 0");
+                throw new DivideByZeroException();
             }
 
-            return 0;
-
+            double result = dividend / divisor;
+            Accumulator = result;
+            return result;
         }
  
 
