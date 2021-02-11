@@ -16,6 +16,7 @@ namespace NUnitTestProject1
         [TestCase(3.5,10,13.5)]
         [TestCase(1.7, 10, 11.7)]
         [TestCase(5,0,5)]
+        [TestCase(2,3,5)]
         public void Test_Add_TestCase_aAddB_EqualsExpected(double a, double b, double expected)
         {
           Assert.That(_uut.Add(a,b), Is.EqualTo(expected));
