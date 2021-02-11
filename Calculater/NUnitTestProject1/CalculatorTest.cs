@@ -49,7 +49,6 @@ namespace NUnitTestProject1
         [TestCase(10, 2, 5)]
         [TestCase(6, 3, 2)]
         [TestCase(8, 4, 2)]
-        [TestCase(4,0,0)]
         public void Test_Divide_TestCase_aDEvideB_EqualsExpected(double a, double b, double expected)
         {
             Assert.That(_uut.Divide(a,b), Is.EqualTo(expected));
